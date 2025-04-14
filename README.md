@@ -14,9 +14,9 @@ sudo ./check_lan7430_interfaces.sh
 ```
 
 ## Write the MAC address to the IC
-Run the following command to write the "lan7430e_00.bin" file to the "eth1" interface:
+Run the following command to write the "lan7430e_00.bin" file to the "enP1p1s0" interface:
 ```shell
-sudo ethtool --set-priv-flags eth1 OTP_ACCESS off
-sudo ethtool -E eth1 magic 0x74A5 offset 0 length 256 < lan7430e_00.bin
+sudo ethtool --set-priv-flags enP1p1s0 OTP_ACCESS off
+sudo ethtool -E enP1p1s0 magic 0x74A5 offset 0 length 256 < lan7430e_00.bin
 ```
 
